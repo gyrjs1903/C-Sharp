@@ -1,13 +1,23 @@
-﻿namespace Hello
+﻿using System;
+using static System.Console;
+
+namespace Hello
 {
     class MainApp
     {
         //프로그램 실행이 시작되는 곳
-        static void Main(string[] args)
-        {
-            if (args.Length ==0) {
-                Console.WriteLine("Hello, World!");
+        static void Main(string[] args) 
+        { 
+            if(args.Length == 0)
+            {
+                Console.WriteLine("사용법 : Hello.exe <이름>");
+                return;
             }
+
+            WriteLine("Hello, {0}!", args[0]); //Hello, World를 프롤프트에 출력
+            //연습문제1번
+            WriteLine("여러분, 안녕하세요?");
+            WriteLine("반갑습니다.");
         }
     }
 }
